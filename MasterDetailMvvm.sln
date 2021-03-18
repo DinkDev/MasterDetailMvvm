@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelClassReflector", "ModelClassReflector\ModelClassReflector.csproj", "{057BCF39-F185-4EA9-88DE-9B86834E73BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterDetailMvvmUi", "MasterDetailMvvmUi\MasterDetailMvvmUi.csproj", "{F82532AD-18CB-4308-BD6F-076220E6E9ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{057BCF39-F185-4EA9-88DE-9B86834E73BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{057BCF39-F185-4EA9-88DE-9B86834E73BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{057BCF39-F185-4EA9-88DE-9B86834E73BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{057BCF39-F185-4EA9-88DE-9B86834E73BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82532AD-18CB-4308-BD6F-076220E6E9ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82532AD-18CB-4308-BD6F-076220E6E9ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82532AD-18CB-4308-BD6F-076220E6E9ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82532AD-18CB-4308-BD6F-076220E6E9ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3C64D30-4A15-44A0-BC9B-AF16D16A6E16}
+	EndGlobalSection
+EndGlobal

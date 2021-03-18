@@ -1,0 +1,33 @@
+﻿<Window x:Class="ModelClassReflector.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="0">
+            <Label DockPanel.Dock="Top">Source Code:</Label>
+            <TextBox x:Name="SourceCode"
+                     AcceptsReturn="True"
+                     VerticalAlignment="Stretch"
+                     VerticalScrollBarVisibility="Visible" />
+        </DockPanel>
+
+        <DockPanel Grid.Column="1">
+            <Label DockPanel.Dock="Top">Reflected JSON:</Label>
+            <TextBox x:Name="ReflectedJson"
+                     AcceptsReturn="True"
+                     VerticalAlignment="Stretch"
+                     VerticalScrollBarVisibility="Visible" />
+        </DockPanel>
+
+        <StackPanel Grid.Column="2">
+            <Button x:Name="CreateJson"
+                    Height="50">Create JSON</Button>
+        </StackPanel>
+    </Grid>
+</Window>
