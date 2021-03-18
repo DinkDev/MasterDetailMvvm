@@ -37,7 +37,7 @@
             get => _item?.State ?? StateEnum.Default;
             set
             {
-                if (value != _item.State)
+                if (_item != null && value != _item.State)
                 {
                     _item.State = value;
                     NotifyOfPropertyChange();
@@ -57,10 +57,39 @@
             set => _item.Name = value;
         }
 
+
+        public BindableCollection<NameWrapper<ParentRecord>> Parents { get; } =
+            new BindableCollection<NameWrapper<ParentRecord>>();
+
+
+        public NameWrapper<ParentRecord> SelectedParent
+        {
+            get
+            {
+                return Parents.FirstOrDefault(s => s.Wrapped == Parent);
+            }
+            set
+            {
+                if (Parent != value.Wrapped)
+                {
+                    Parent = value.Wrapped;
+                    NotifyOfPropertyChange();
+                }
+            }
+        }
+
         public ParentRecord Parent
         {
-            get => ((IDomainRecord)_item).Parent;
-            set => ((IDomainRecord)_item).Parent = value;
+            get => ((IDomainRecord)_item)?.Parent;
+            set
+            {
+                if (_item != null && ((IDomainRecord)_item).Parent != value)
+                {
+                    ((IDomainRecord)_item).Parent = value;
+                    NotifyOfPropertyChange();
+                    NotifyOfPropertyChange(nameof(SelectedParent));
+                }
+            }
         }
 
         public DomainRecordDetailListViewModel Item

@@ -13,14 +13,18 @@
         <TextBlock>Name:</TextBlock>
         <TextBox x:Name="Name" />
         
+        <TextBlock>Parent:</TextBlock>
+        <ComboBox x:Name="Parents" SelectedItem="{Binding SelectedParent}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
         <TextBlock>Parent ID:</TextBlock>
         <TextBox x:Name="ParentId" />
 
-        <TextBlock>Parent Name</TextBlock>
-        <TextBox x:Name="ParentName" />
-
-        <!--<TextBlock>State:</TextBlock>
-        <TextBox x:Name="State" />-->
         <TextBlock>State:</TextBlock>
         <ComboBox x:Name="States" SelectedItem="{Binding SelectedState}">
             <ComboBox.ItemTemplate>

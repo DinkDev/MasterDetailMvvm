@@ -1,6 +1,7 @@
 ﻿namespace MasterDetailMvvmUi.ViewModels
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Reflection;
     using Caliburn.Micro;
     using Model;
@@ -22,6 +23,7 @@
             items.Add(new DomainRecord { Name = "Second", Parent = mother, State = StateEnum.Default });
 
             _detail = new DomainRecordDetailViewModel();
+            _detail.Parents.AddRange(new[] {father, mother}.Select(p => new NameWrapper<ParentRecord>(p.Name, p)));
 
             _master = new DomainRecordMasterViewModel(items, _detail);
         }
